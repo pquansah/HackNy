@@ -4,11 +4,9 @@ import json
 api_key = 'MXumeVsEgV4ncwe7aHDAdmwnNM4UkI92'
 
 emotion_list = ['happy', 'sad', 'scared', 'angry', 'surprised', 'confused', 'excited', 'disgust']
-<<<<<<< HEAD
 emo = emotion_list[4]
-=======
+
 emo = emotion_list[2]
->>>>>>> master
 subject = input('Subject : ')
 concept = '{} {}'.format(emo, subject).replace(' ', '+')
 
