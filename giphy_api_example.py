@@ -1,6 +1,6 @@
 import urllib.request, json
 
-emotion_list = ['happy', 'sad', 'scared', 'angry', 'suprised', 'confused', 'excited', 'disgust']
+emotion_list = ['happy', 'sad', 'scared', 'angry', 'surprised', 'confused', 'excited', 'disgust']
 api_key = 'MXumeVsEgV4ncwe7aHDAdmwnNM4UkI92'
 concept = 'ryan gosling'.replace(' ', '+')
 
