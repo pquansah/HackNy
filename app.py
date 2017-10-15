@@ -13,7 +13,7 @@ client_secret = '15567e9f23b8d117b4ff3b2cfd5a5195f0def36d'
 def clarifai_prediction(image):
     app = ClarifaiApp(api_key='f789eaa60ab04869a2b80c752daa3484')
     model = app.workflows.get('mood-flow')
-    climage = ClImage(url=image)
+    climage = ClImage(filename=image)
     hello = model.predict([climage])
     test = hello['results'][0]['outputs'][0]['data']['concepts'][0]['id']
     return test
@@ -36,7 +36,7 @@ def hello():
     
     fixed_concept = concept.replace('+{}'.format(emo),'')
 
-    data_search_sticker = json.loads(urllib.urlopen("http://api.giphy.com/v1/stickers/search?q={}&api_key={}&limit=5".format(concept,api_key)).read())
+    data_search_sticker = json.loads(urllib.urlopen("http://api.giphy.com/v1/stickers/search?q={}&api_key={}&limit=5".format(concept,giphy_api_key)).read())
     sticker_list = []
     for sticker in data_search_sticker['data']:
         sticker_list.append(sticker['images']['original']['url'])
