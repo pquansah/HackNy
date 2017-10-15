@@ -195,6 +195,8 @@
                 
                                 // Get an image dataURL from the canvas.
                                 var imageDataURL = hidden_canvas.toDataURL('image/png');
+
+                                console.log(imageDataURL)
                 
                                 // Set the dataURL as source of an image element, showing the captured photo.
                                 image.setAttribute('src', imageDataURL); 
