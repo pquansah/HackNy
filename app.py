@@ -1,14 +1,22 @@
 from flask import Flask, render_template, request
+from clarifai.rest import ClarifaiApp
+from clarifai.rest import Image as ClImage
 import requests 
 import urllib, json
 
 app = Flask(__name__)
 emotion_list = ['happy', 'sad', 'scared', 'angry', 'surprised', 'confused', 'disgust']
 giphy_api_key = 'MXumeVsEgV4ncwe7aHDAdmwnNM4UkI92'
+client_id = '3f50136dbb425b8'
+client_secret = '15567e9f23b8d117b4ff3b2cfd5a5195f0def36d'
 
-def clarifai_prediction():
-    return "disgust"
-    #paak put your stuff here
+def clarifai_prediction(image):
+    app = ClarifaiApp(api_key='f789eaa60ab04869a2b80c752daa3484')
+    model = app.workflows.get('mood-flow')
+    climage = ClImage(url=image)
+    hello = model.predict([climage])
+    test = hello['results'][0]['outputs'][0]['data']['concepts'][0]['id']
+    return test
 
 @app.route('/')
 def main():
@@ -16,7 +24,8 @@ def main():
 
 @app.route('/gif-urls', methods=['POST'])
 def hello():
-    emo = clarifai_prediction()
+    img = request.form.get("image")
+    emo = clarifai_prediction(img)
     subject = request.form.get("name")
     concept = '{} {}'.format(subject, emo).replace(' ', '+')
 
