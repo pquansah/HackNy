@@ -37,7 +37,7 @@ def hello():
     for gif in data['data']:
         gif_list.append(gif['images']['original']['url'])
     
-    fixed_concept = concept.replace('{}+'.format(emo),'')
+    fixed_concept = concept.replace('+{}'.format(emo),'')
 
     data_search_sticker = json.loads(urllib.urlopen("http://api.giphy.com/v1/stickers/search?q={}&api_key={}&limit=5".format(concept,giphy_api_key)).read())
     sticker_list = []
