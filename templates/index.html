@@ -5,11 +5,11 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="text-center">
-                    <h1>Emotion Request from User</h1>
-        <p class="lead">This will request user emotion through image<br> 
+                    <h1>Emo.io</h1>
+        <p class="lead">Sticker and Gifs will be suggested through your emotion and keywords<br> 
         This website is built using <a href="http://flask.pocoo.org/docs/0.12/" target="_blank">Flask</a> 
-        <a href="http://getbootstrap.com/" target="_blank">Bootstrap 3</a> 
-        and Geri Madanguit, Paakwesi Quansah, Farhana Mustafa, and Tanjina Mowla</p>
+        and<a href="http://getbootstrap.com/" target="_blank"> Bootstrap 3</a> <br>
+        Creators: Geri Madanguit, Paakwesi Quansah, Farhana Mustafa, and Tanjina Mowla</p>
         <hr />
 
         <div class="well">
@@ -23,21 +23,16 @@
     
             <script>
                 var video = document.querySelector("#videoElement");
-     
                 navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
-     
                 if (navigator.getUserMedia) {       
                     navigator.getUserMedia({video: true}, handleVideo, videoError);
                 }
-     
                 function handleVideo(stream) {
                     video.src = window.URL.createObjectURL(stream);
                 }
-     
                 function videoError(e) {
                     console.error(err);
                 }
-                
                 function takeSelfie() {
                     // $('#cameraInput').on('change', function(e){
                     // $data = e.originalEvent.target.files[0];
@@ -46,11 +41,10 @@
                     // $('#your_img_id').attr('src',evt.target.result);
                     // reader.readAsDataUrl($data);
                     // }});
-    
                     var hidden_canvas = document.querySelector('canvas'),
                     video = document.querySelector('video.camera_stream'),
                     image = document.querySelector('img.photo'),
-    
+
                     // Get the exact size of the video element.
                     width = video.videoWidth,
                     height = video.videoHeight,
