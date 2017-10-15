@@ -6,9 +6,13 @@
             <div class="col-sm-12">
                 <div class="text-center">
                     <h1>Here are the gifs based on your emotion and input concept</h1>
-                    {% for url in urls %} 
-                        <p class="lead">{{ url }}<br> 
+                    
+                    {% for image_url in image_urls %} 
+                        <!-- <p class="lead">{{ image_url }}<br>  -->
+                        <!-- <img src="{{ image_url }}"/> -->
+                        <img src=" {{ image_url }} " />
                     {% endfor %}
+
         This website is built using <a href="http://flask.pocoo.org/docs/0.12/" target="_blank">Flask</a> 
         and <a href="http://getbootstrap.com/" target="_blank">Bootstrap 3</a></p>
                 <a href="/" class="btn btn-primary">Try again!</a>

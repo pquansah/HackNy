@@ -20,10 +20,10 @@ def hello():
     concept = '{} {}'.format(subject, emo).replace(' ', '+')
 
     data = json.loads(urllib.urlopen("http://api.giphy.com/v1/gifs/search?q={}&api_key={}&limit=5".format(concept,giphy_api_key)).read())
-    embed_urls_list = []
+    gif_list = []
     for gif in data['data']:
-        embed_urls_list.append(gif['embed_url'])
-    return render_template('hello.html', urls=embed_urls_list)
+        gif_list.append(gif['images']['original']['url'])
+    return render_template('hello.html', image_urls=gif_list)
 '''
 # using an api call to get data
 @app.route('/weather/', methods=['GET'])
