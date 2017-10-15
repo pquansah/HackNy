@@ -22,20 +22,15 @@ def first():
     for gif in gif_list:
         print(json.dumps(gif))
 
+def firsthalf():
+
 def second():
     sticker_list = []
     for sticker in data_search_sticker['data']:
         sticker_list.append(sticker['images']['original']['url'])
     print(json.dumps(sticker_list, indent=1))
-    '''  
-    for d in data_search_sticker:
-        a = d[0]['data']
-    print(a)
-      
-        sticker_list.append(d['data']['original']['webp'])
-    for sticker in sticker_list:        
-        print(json.dumps(sticker,indent=1))
-    '''
+
+def second half():
 
 if __name__ == "__main__": 
     #first()
