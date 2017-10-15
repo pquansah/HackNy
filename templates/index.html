@@ -196,7 +196,7 @@
                                 // Get an image dataURL from the canvas.
                                 var imageDataURL = hidden_canvas.toDataURL('image/png');
 
-                                console.log(imageDataURL)
+                                console.log(imageDataURL.toString())
                 
                                 // Set the dataURL as source of an image element, showing the captured photo.
                                 image.setAttribute('src', imageDataURL); 
@@ -208,8 +208,10 @@
     
                         <center> <br /> 
                             <!-- <input type="button" value="Take a selfie!" onclick="takeSelfie()"/>  -->
-                            <a id="dl-btn" href="#" download="glorious_selfie.png">Take a selfie!</a>
+                            <a id="dl-btn" href="#" download="glorious_selfie.png" onclick="takeSelfie()">Take a selfie!</a>
                         </center>
+
+                        <br/>
 
                         <form action="/gif-urls" method="post">
                             
