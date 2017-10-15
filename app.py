@@ -49,6 +49,9 @@ def hello():
 # using an api call to get data
 @app.route('/weather/', methods=['GET'])
 '''
+@app.route('/test')
+def test():
+    return render_template('test.html')
 
 if __name__ == '__main__':
     app.debug = True
