@@ -4,7 +4,7 @@ import urllib, json
 
 app = Flask(__name__)
 emotion_list = ['happy', 'sad', 'scared', 'angry', 'surprised', 'confused', 'disgust']
-
+giphy_api_key = 'MXumeVsEgV4ncwe7aHDAdmwnNM4UkI92'
 def clarifai_prediction():
     return "disgust"
     #paak put your stuff here
@@ -19,11 +19,11 @@ def hello():
     subject = request.form.get("name")
     concept = '{} {}'.format(subject, emo).replace(' ', '+')
 
-    data = json.loads(urllib.urlopen("http://api.giphy.com/v1/gifs/search?q={}&api_key={}&limit=5".format(concept,api_key)).read())
+    data = json.loads(urllib.urlopen("http://api.giphy.com/v1/gifs/search?q={}&api_key={}&limit=5".format(concept,giphy_api_key)).read())
     embed_urls_list = []
     for gif in data['data']:
         embed_urls_list.append(gif['embed_url'])
-    return render_template('hello.html', urls=embed_urls_li)
+    return render_template('hello.html', urls=embed_urls_list)
 '''
 # using an api call to get data
 @app.route('/weather/', methods=['GET'])
