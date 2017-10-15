@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="805eeeb3-c09c-46c2-9b74-b40f02116140" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
     </list>
+=======
+    <list default="true" id="805eeeb3-c09c-46c2-9b74-b40f02116140" name="Default" comment="" />
+>>>>>>> Stashed changes
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +58,10 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+              <folding>
+                <marker date="1508051313241" expanded="true" signature="1031:1226" ph="..." />
+                <marker date="1508051313241" expanded="true" signature="1247:1718" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -62,9 +69,22 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="2524">
               <caret line="190" column="50" lean-forward="true" selection-start-line="190" selection-start-column="50" selection-end-line="190" selection-end-column="50" />
               <folding />
+=======
+            <state relative-caret-position="323">
+              <caret line="86" column="47" lean-forward="false" selection-start-line="86" selection-start-column="47" selection-end-line="86" selection-end-column="47" />
+              <folding>
+                <marker date="1508051313192" expanded="true" signature="2142:3269" ph="..." />
+                <marker date="1508051313192" expanded="true" signature="2142:4198" ph="..." />
+                <marker date="1508051313192" expanded="true" signature="3295:3510" ph="..." />
+                <marker date="1508051313192" expanded="true" signature="3563:4183" ph="..." />
+                <marker date="1508051313192" expanded="true" signature="3621:3793" ph="..." />
+                <marker date="1508051313192" expanded="true" signature="3853:4084" ph="..." />
+              </folding>
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
@@ -104,9 +124,16 @@
       </list>
     </option>
   </component>
+<<<<<<< Updated upstream
   <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1280" />
     <option name="height" value="800" />
+=======
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="676" />
+    <option name="width" value="697" />
+    <option name="height" value="735" />
+>>>>>>> Stashed changes
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -191,7 +218,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< Updated upstream
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+=======
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+>>>>>>> Stashed changes
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25040388" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -383,15 +414,31 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1508051313241" expanded="true" signature="1031:1226" ph="..." />
+            <marker date="1508051313241" expanded="true" signature="1247:1718" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="2524">
           <caret line="190" column="50" lean-forward="true" selection-start-line="190" selection-start-column="50" selection-end-line="190" selection-end-column="50" />
           <folding />
+=======
+        <state relative-caret-position="323">
+          <caret line="86" column="47" lean-forward="false" selection-start-line="86" selection-start-column="47" selection-end-line="86" selection-end-column="47" />
+          <folding>
+            <marker date="1508051313192" expanded="true" signature="2142:3269" ph="..." />
+            <marker date="1508051313192" expanded="true" signature="2142:4198" ph="..." />
+            <marker date="1508051313192" expanded="true" signature="3295:3510" ph="..." />
+            <marker date="1508051313192" expanded="true" signature="3563:4183" ph="..." />
+            <marker date="1508051313192" expanded="true" signature="3621:3793" ph="..." />
+            <marker date="1508051313192" expanded="true" signature="3853:4084" ph="..." />
+          </folding>
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
