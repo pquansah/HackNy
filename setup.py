@@ -10,7 +10,11 @@ app = ClarifaiApp(api_key='f789eaa60ab04869a2b80c752daa3484')
 # get the general model
 model = app.workflows.get('mood-flow')
 
+<<<<<<< Updated upstream
 image = ClImage(filename='/Users/GeriElise/Desktop/face5.png')
+=======
+image = ClImage(url='https://i.ytimg.com/vi/HF5JUilr89U/hqdefault.jpg')
+>>>>>>> Stashed changes
 hello = model.predict([image])
 test = hello['results'][0]['outputs'][0]['data']['concepts'][0]['id']
 # predict with the model
