@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="text-center">
+                    <h1>Emotion Request from User</h1>
+        <p class="lead">This will request user emotion through image<br> 
+        This website is built using <a href="http://flask.pocoo.org/docs/0.12/" target="_blank">Flask</a> 
+        and <a href="http://getbootstrap.com/" target="_blank">Bootstrap 3</a></p>
+        <hr />
+        <div class="well">
+            <h3>Enter concept of gifs to return</h3>
+            <form action="/hello" method="post">
+                <div class="form-group">
+                    <label for="id_name">Enter Concept</label>
+                    <input id="id_name" name="name" type="text" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+{% endblock %}
