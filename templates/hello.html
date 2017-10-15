@@ -5,11 +5,12 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="text-center">
-                    <h1>Gifs reults based on {{ emotion }} emotion and {{ concept }}</h1>
+                    <h1>Results based on {{ emotion }} emotion and {{ concept }}</h1>
+                    <a href="/" class="btn btn-primary">Try again!</a>
+                </div>
+                <div class="text-center">
                     
                     {% for gif_url in gif_urls %} 
-                        <!-- <p class="lead">{{ image_url }}<br>  -->
-                        <!-- <img src="{{ image_url }}"/> -->
                         <img src=" {{ gif_url }} " />
                     {% endfor %}
 
@@ -17,8 +18,8 @@
                         <img src=" {{ sticker_url }} " />
                     {% endfor %}
 
-                <a href="/" class="btn btn-primary">Try again!</a>
                 </div>
+
             </div>
         </div>
     </div>
