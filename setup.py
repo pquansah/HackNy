@@ -10,8 +10,8 @@ app = ClarifaiApp(api_key='f789eaa60ab04869a2b80c752daa3484')
 # get the general model
 model = app.workflows.get('mood-flow')
 
-image = ClImage(url='https://sslg.ulximg.com/image/405x405/artist/1392767353_217f16228baaa5dc18c82925ac76edf6.jpg/9e89e114db44f266e044addd06e88d69/1392767353_kanye_west_wall_40.jpg')
-hello = model.predict([image])
+image = ClImage(filename='C:\Users\paakc\Downloads\bond')
+hello = model.predict_by_filename([image])
 test = hello['results'][0]['outputs'][0]['data']['concepts'][0]['id']
 # predict with the model
 
