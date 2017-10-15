@@ -8,7 +8,7 @@ client = ImgurClient('3f50136dbb425b8', '15567e9f23b8d117b4ff3b2cfd5a5195f0def36
 items = client.gallery()
 for item in items:
     print(item.link)
-    
+
 client_id = '3f50136dbb425b8'
 client_secret = '15567e9f23b8d117b4ff3b2cfd5a5195f0def36d'
 
