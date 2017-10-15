@@ -12,10 +12,10 @@ client_secret = '15567e9f23b8d117b4ff3b2cfd5a5195f0def36d'
 
 def clarifai_prediction(image):
     app = ClarifaiApp(api_key='f789eaa60ab04869a2b80c752daa3484')
-    model = app.workflows.get('mood-flow')
+    model = app.models.get('Mood Recognition')
     climage = ClImage(filename=image)
     hello = model.predict([climage])
-    test = hello['results'][0]['outputs'][0]['data']['concepts'][0]['id']
+    test = hello['outputs'][0]['data']['concepts'][0]['id']
     return test
 
 @app.route('/')
