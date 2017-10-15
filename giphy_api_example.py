@@ -8,14 +8,35 @@ def clarifai_prediction():
 
 emotion_list = ['happy', 'sad', 'scared', 'angry', 'surprised', 'confused', 'excited', 'disgust']
 emo = clarifai_prediction()
-subject = raw_input('Subject : ')
+subject = "moon"
 concept = '{} {}'.format(subject, emo).replace(' ', '+')
 
-data = json.loads(urllib.urlopen("http://api.giphy.com/v1/gifs/search?q={}&api_key={}&limit=5".format(concept,api_key)).read())
-embed_urls_list = []
-for gif in data['data']:
-    embed_urls_list.append(gif['embed_url'])
-    
-for url in embed_urls_list:
-    print(json.dumps(url))
+data_search_gif = json.loads(urllib.urlopen("http://api.giphy.com/v1/gifs/search?q={}&api_key={}&limit=5".format(concept,api_key)).read())
+data_search_sticker = json.loads(urllib.urlopen("http://api.giphy.com/v1/stickers/search?q={}&api_key={}&limit=5".format(concept,api_key)).read())
 
+def first():
+    gif_list = []
+    for gif in data_search_gif['data']:
+        gif_list.append(gif['images']['original']['url'])
+    
+    for gif in gif_list:
+        print(json.dumps(gif))
+
+def second():
+    sticker_list = []
+    for sticker in data_search_sticker['data']:
+        sticker_list.append(sticker['images']['original']['url'])
+    print(json.dumps(sticker_list, indent=1))
+    '''  
+    for d in data_search_sticker:
+        a = d[0]['data']
+    print(a)
+      
+        sticker_list.append(d['data']['original']['webp'])
+    for sticker in sticker_list:        
+        print(json.dumps(sticker,indent=1))
+    '''
+
+if __name__ == "__main__": 
+    #first()
+    second()

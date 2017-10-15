@@ -35,7 +35,13 @@ def hello():
         gif_list.append(gif['images']['original']['url'])
     
     fixed_concept = concept.replace('+{}'.format(emo),'')
-    return render_template('hello.html', concept=fixed_concept, image_urls=gif_list, emotion=emo)
+
+    data_search_sticker = json.loads(urllib.urlopen("http://api.giphy.com/v1/stickers/search?q={}&api_key={}&limit=5".format(concept,api_key)).read())
+    sticker_list = []
+    for sticker in data_search_sticker['data']:
+        sticker_list.append(sticker['images']['original']['url'])
+
+    return render_template('hello.html', concept=fixed_concept, gif_urls=gif_list, sticker_urls=sticker_list, emotion=emo)
 '''
 # using an api call to get data
 @app.route('/weather/', methods=['GET'])

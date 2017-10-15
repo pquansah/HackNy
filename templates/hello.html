@@ -7,12 +7,16 @@
                 <div class="text-center">
                     <h1>Gifs reults based on {{ emotion }} emotion and {{ concept }}</h1>
                     
-                    {% for image_url in image_urls %} 
+                    {% for gif_url in gif_urls %} 
                         <!-- <p class="lead">{{ image_url }}<br>  -->
                         <!-- <img src="{{ image_url }}"/> -->
-                        <img src=" {{ image_url }} " />
+                        <img src=" {{ gif_url }} " />
                     {% endfor %}
 
+                    % for sticker_url in sticker_urls %} 
+                        <img src=" {{ sticker_url }} " />
+                    {% endfor %}
+                    
                 <a href="/" class="btn btn-primary">Try again!</a>
                 </div>
             </div>
