@@ -1,6 +1,59 @@
 {% extends "base.html" %}
 
 {% block content %}
+    <header>
+         <style type="text/css">
+            
+            .animate {
+                background: linear-gradient(270deg, #00ffff, #ff7bac);
+                -webkit-animation: GradientAnimation 10s ease infinite;
+                -moz-animation: GradientAnimation 10s ease infinite;
+                animation-name: GradientAnimation 10s ease infinite; 
+             }
+
+        .static-gradient{
+                background: #ff7bac; /* For browsers that do not support gradients */
+                background: -webkit-linear-gradient(right, #00ffff , #ff7bac); /* For Safari 5.1 to 6.0 */
+                background: -o-linear-gradient(right, #00ffff , #ff7bac); /* For Opera 11.1 to 12.0 */
+                background: -moz-linear-gradient(right, #00ffff , #ff7bac); /* For Firefox 3.6 to 15 */
+                background: linear-gradient(to right, #00ffff , #ff7bac); /* Standard syntax */
+            }
+        .animate-button:hover{
+                background: linear-gradient(270deg, #00ffff, #ff7bac);
+                background-size: 400% 400%;
+
+                -webkit-animation: GradientAnimation 5s ease infinite;
+                -moz-animation: GradientAnimation 5s ease infinite;
+                animation: GradientAnimation 5s ease infinite;
+            }
+             
+        @-webkit-keyframes GradientAnimation {
+            0%{background-position:0% 50%}
+            50%{background-position:100% 50%}
+            100%{background-position:0% 50%}
+            }
+        @-moz-keyframes GradientAnimation {
+            0%{background-position:0% 50%}
+            50%{background-position:100% 50%}
+            100%{background-position:0% 50%}
+            }
+        @keyframes GradientAnimation {
+            0%{background-position:0% 50%}
+            50%{background-position:100% 50%}
+            100%{background-position:0% 50%}
+            }
+             
+             ::-moz-selection { /* Code for Firefox */
+                background: #00ffff;
+            }
+
+            ::selection {
+                background: #00ffff;
+            }    
+        </style>
+    </header>
+    
+<body class = "animate">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
@@ -94,5 +147,7 @@
             </div>
         </div>
     </div>
+    </body>
+    
         
 {% endblock %}
