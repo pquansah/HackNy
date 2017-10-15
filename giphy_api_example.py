@@ -3,10 +3,11 @@ import json
 
 api_key = 'MXumeVsEgV4ncwe7aHDAdmwnNM4UkI92'
 
-emotion_list = ['happy', 'sad', 'scared', 'angry', 'surprised', 'confused', 'excited', 'disgust']
-emo = emotion_list[4]
+def clarifai_prediction():
+    return 'happy'
 
-emo = emotion_list[2]
+emotion_list = ['happy', 'sad', 'scared', 'angry', 'surprised', 'confused', 'excited', 'disgust']
+emo = clarifai_prediction()
 subject = raw_input('Subject : ')
 concept = '{} {}'.format(subject, emo).replace(' ', '+')
 
