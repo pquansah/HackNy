@@ -1,11 +1,6 @@
 from flask import Flask, render_template, request
 import requests 
-import urllib
-
-from clarifai.rest import ClarifaiApp
-from clarifai.rest import Image as ClImage
-#from imgurpython import ImgurClient
-import json
+import urllib, json
 
 app = Flask(__name__)
 emotion_list = ['happy', 'sad', 'scared', 'angry', 'surprised', 'confused', 'disgust']
@@ -15,16 +10,13 @@ def clarifai_prediction():
     #paak put your stuff here
 
 @app.route('/')
-def send_emotion_gif():
-    emo = clarifai_prediction()
-    
-    return render_template('index.html', )
-
+def main():
+    return render_template('index.html')
 
 @app.route('/gif-urls', methods=['POST'])
 def hello():
     emo = clarifai_prediction()
-    name = request.form.get("name")
+    subject = request.form.get("name")
     concept = '{} {}'.format(subject, emo).replace(' ', '+')
 
     data = json.loads(urllib.urlopen("http://api.giphy.com/v1/gifs/search?q={}&api_key={}&limit=5".format(concept,api_key)).read())
@@ -36,3 +28,7 @@ def hello():
 # using an api call to get data
 @app.route('/weather/', methods=['GET'])
 '''
+
+if __name__ == '__main__':
+    app.debug = True
+    app.run()
