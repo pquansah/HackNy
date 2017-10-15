@@ -26,7 +26,10 @@ def main():
 def hello():
     img = request.form.get("image")
     emo = clarifai_prediction(img)
-    subject = request.form.get("name")
+    try:
+        subject = request.form.get("name")
+    except:
+        subject = ""
     concept = '{} {}'.format(subject, emo).replace(' ', '+')
 
     data = json.loads(urllib.urlopen("http://api.giphy.com/v1/gifs/search?q={}&api_key={}&limit=5".format(concept,giphy_api_key)).read())

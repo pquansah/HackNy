@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
+
+<body class = "animate">    
     <header>
          <style type="text/css">
             
@@ -11,14 +13,14 @@
                 animation-name: GradientAnimation 10s ease infinite; 
              }
 
-        .static-gradient{
+            .static-gradient{
                 background: #ff7bac; /* For browsers that do not support gradients */
                 background: -webkit-linear-gradient(right, #00ffff , #ff7bac); /* For Safari 5.1 to 6.0 */
                 background: -o-linear-gradient(right, #00ffff , #ff7bac); /* For Opera 11.1 to 12.0 */
                 background: -moz-linear-gradient(right, #00ffff , #ff7bac); /* For Firefox 3.6 to 15 */
                 background: linear-gradient(to right, #00ffff , #ff7bac); /* Standard syntax */
             }
-        .animate-button:hover{
+            .animate-button:hover{
                 background: linear-gradient(270deg, #00ffff, #ff7bac);
                 background-size: 400% 400%;
 
@@ -27,23 +29,23 @@
                 animation: GradientAnimation 5s ease infinite;
             }
              
-        @-webkit-keyframes GradientAnimation {
-            0%{background-position:0% 50%}
-            50%{background-position:100% 50%}
-            100%{background-position:0% 50%}
-            }
-        @-moz-keyframes GradientAnimation {
-            0%{background-position:0% 50%}
-            50%{background-position:100% 50%}
-            100%{background-position:0% 50%}
-            }
-        @keyframes GradientAnimation {
-            0%{background-position:0% 50%}
-            50%{background-position:100% 50%}
-            100%{background-position:0% 50%}
-            }
+            @-webkit-keyframes GradientAnimation {
+                0%{background-position:0% 50%}
+                50%{background-position:100% 50%}
+                100%{background-position:0% 50%}
+                }
+            @-moz-keyframes GradientAnimation {
+                0%{background-position:0% 50%}
+                50%{background-position:100% 50%}
+                100%{background-position:0% 50%}
+                }
+            @keyframes GradientAnimation {
+                0%{background-position:0% 50%}
+                50%{background-position:100% 50%}
+                100%{background-position:0% 50%}
+                }
              
-             ::-moz-selection { /* Code for Firefox */
+            ::-moz-selection { /* Code for Firefox */
                 background: #00ffff;
             }
 
@@ -53,82 +55,86 @@
              
              @import url(https://fonts.googleapis.com/css?family=Varela+Round);
 
-h1 {
-  color: hsla(0, 0%, 0%, .9);
-  font: normal 100px Varela Round, sans-serif;
-  height: 100px;
-  letter-spacing: 5px;
-  text-align: center;
-  text-transform: uppercase;
-  animation: move linear 2000ms infinite;  
-}
 
-@keyframes move {
-  0% {
-    text-shadow:
-      4px -4px 0 hsla(0, 100%, 50%, 1), 
-      3px -3px 0 hsla(0, 100%, 50%, 1), 
-      2px -2px 0 hsla(0, 100%, 50%, 1), 
-      1px -1px 0 hsla(0, 100%, 50%, 1),
-      -4px 4px 0 hsla(180, 100%, 50%, 1), 
-      -3px 3px 0 hsla(180, 100%, 50%, 1), 
-      -2px 2px 0 hsla(180, 100%, 50%, 1), 
-      -1px 1px 0 hsla(180, 100%, 50%, 1)
-    ;
-  }
-  25% {    
-    text-shadow:      
-      -4px -4px 0 hsla(180, 100%, 50%, 1), 
-      -3px -3px 0 hsla(180, 100%, 50%, 1), 
-      -2px -2px 0 hsla(180, 100%, 50%, 1), 
-      -1px -1px 0 hsla(180, 100%, 50%, 1),
-      4px 4px 0 hsla(0, 100%, 50%, 1), 
-      3px 3px 0 hsla(0, 100%, 50%, 1), 
-      2px 2px 0 hsla(0, 100%, 50%, 1), 
-      1px 1px 0 hsla(0, 100%, 50%, 1)      
-    ;
-  }
-  50% {
-    text-shadow:
-      -4px 4px 0 hsla(0, 100%, 50%, 1), 
-      -3px 3px 0 hsla(0, 100%, 50%, 1), 
-      -2px 2px 0 hsla(0, 100%, 50%, 1), 
-      -1px 1px 0 hsla(0, 100%, 50%, 1),
-      4px -4px 0 hsla(180, 100%, 50%, 1), 
-      3px -3px 0 hsla(180, 100%, 50%, 1), 
-      2px -2px 0 hsla(180, 100%, 50%, 1), 
-      1px -1px 0 hsla(180, 100%, 50%, 1)
-    ;
-  }
-  75% {
-    text-shadow:
-      4px 4px 0 hsla(180, 100%, 50%, 1), 
-      3px 3px 0 hsla(180, 100%, 50%, 1), 
-      2px 2px 0 hsla(180, 100%, 50%, 1), 
-      1px 1px 0 hsla(180, 100%, 50%, 1),
-      -4px -4px 0 hsla(0, 100%, 50%, 1), 
-      -3px -3px 0 hsla(0, 100%, 50%, 1), 
-      -2px -2px 0 hsla(0, 100%, 50%, 1), 
-      -1px -1px 0 hsla(0, 100%, 50%, 1)      
-    ;
-  }
-  100% {
-    text-shadow:
-      4px -4px 0 hsla(0, 100%, 50%, 1), 
-      3px -3px 0 hsla(0, 100%, 50%, 1), 
-      2px -2px 0 hsla(0, 100%, 50%, 1), 
-      1px -1px 0 hsla(0, 100%, 50%, 1),
-      -4px 4px 0 hsla(180, 100%, 50%, 1), 
-      -3px 3px 0 hsla(180, 100%, 50%, 1), 
-      -2px 2px 0 hsla(180, 100%, 50%, 1), 
-      -1px 1px 0 hsla(180, 100%, 50%, 1)
-    ;
-  }  
-}
+
+
+            h1 {
+            color: hsla(0, 0%, 0%, .9);
+            font: normal 100px Varela Round, sans-serif;
+            height: 100px;
+            letter-spacing: 5px;
+            text-align: center;
+            text-transform: uppercase;
+            animation: move linear 2000ms infinite;  
+            }
+
+            @keyframes move {
+            0% {
+                text-shadow:
+                4px -4px 0 hsla(0, 100%, 50%, 1), 
+                3px -3px 0 hsla(0, 100%, 50%, 1), 
+                2px -2px 0 hsla(0, 100%, 50%, 1), 
+                1px -1px 0 hsla(0, 100%, 50%, 1),
+                -4px 4px 0 hsla(180, 100%, 50%, 1), 
+                -3px 3px 0 hsla(180, 100%, 50%, 1), 
+                -2px 2px 0 hsla(180, 100%, 50%, 1), 
+                -1px 1px 0 hsla(180, 100%, 50%, 1)
+                ;
+            }
+            25% {    
+                text-shadow:      
+                -4px -4px 0 hsla(180, 100%, 50%, 1), 
+                -3px -3px 0 hsla(180, 100%, 50%, 1), 
+                -2px -2px 0 hsla(180, 100%, 50%, 1), 
+                -1px -1px 0 hsla(180, 100%, 50%, 1),
+                4px 4px 0 hsla(0, 100%, 50%, 1), 
+                3px 3px 0 hsla(0, 100%, 50%, 1), 
+                2px 2px 0 hsla(0, 100%, 50%, 1), 
+                1px 1px 0 hsla(0, 100%, 50%, 1)      
+                ;
+            }
+            50% {
+                text-shadow:
+                -4px 4px 0 hsla(0, 100%, 50%, 1), 
+                -3px 3px 0 hsla(0, 100%, 50%, 1), 
+                -2px 2px 0 hsla(0, 100%, 50%, 1), 
+                -1px 1px 0 hsla(0, 100%, 50%, 1),
+                4px -4px 0 hsla(180, 100%, 50%, 1), 
+                3px -3px 0 hsla(180, 100%, 50%, 1), 
+                2px -2px 0 hsla(180, 100%, 50%, 1), 
+                1px -1px 0 hsla(180, 100%, 50%, 1)
+                ;
+            }
+            75% {
+                text-shadow:
+                4px 4px 0 hsla(180, 100%, 50%, 1), 
+                3px 3px 0 hsla(180, 100%, 50%, 1), 
+                2px 2px 0 hsla(180, 100%, 50%, 1), 
+                1px 1px 0 hsla(180, 100%, 50%, 1),
+                -4px -4px 0 hsla(0, 100%, 50%, 1), 
+                -3px -3px 0 hsla(0, 100%, 50%, 1), 
+                -2px -2px 0 hsla(0, 100%, 50%, 1), 
+                -1px -1px 0 hsla(0, 100%, 50%, 1)      
+                ;
+            }
+            100% {
+                text-shadow:
+                4px -4px 0 hsla(0, 100%, 50%, 1), 
+                3px -3px 0 hsla(0, 100%, 50%, 1), 
+                2px -2px 0 hsla(0, 100%, 50%, 1), 
+                1px -1px 0 hsla(0, 100%, 50%, 1),
+                -4px 4px 0 hsla(180, 100%, 50%, 1), 
+                -3px 3px 0 hsla(180, 100%, 50%, 1), 
+                -2px 2px 0 hsla(180, 100%, 50%, 1), 
+                -1px 1px 0 hsla(180, 100%, 50%, 1)
+                ;
+            }  
+            }
         </style>
     </header>
-    
-<div class = "animate">
+</body>
+
+<body class = "animate">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
@@ -140,89 +146,92 @@ h1 {
         Creators: Geri Madanguit, Paakwesi Quansah, Farhana Mustafa, and Tanjina Mowla</p>
         <hr />
 
-        <div class="well">
-            <h3>Share your Feelings and Enter Keywords</h3>
+                    <div class="well">
+                        <h3>Share your Feelings and Enter Keywords</h3>
 
-            <div id="container">
-                <video autoplay="true" id="videoElement">
-         
-                </video>
-            </div>
+                        <div id="container">
+                            <video autoplay="true" id="videoElement">
+                                
+                            </video>
+                        </div>
     
-            <script>
-                var video = document.querySelector("#videoElement");
-                navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
-                if (navigator.getUserMedia) {       
-                    navigator.getUserMedia({video: true}, handleVideo, videoError);
-                }
-                function handleVideo(stream) {
-                    video.src = window.URL.createObjectURL(stream);
-                }
-                function videoError(e) {
-                     console.error(err);
-                }
-                function takeSelfie() {
-                    // $('#cameraInput').on('change', function(e){
-                    // $data = e.originalEvent.target.files[0];
-                    // $reader = new FileReader();
-                    // reader.onload = function(evt){
-                    // $('#your_img_id').attr('src',evt.target.result);
-                    // reader.readAsDataUrl($data);
-                    // }});
-                    var hidden_canvas = document.querySelector('canvas'),
-                    video = document.querySelector('video.camera_stream'),
-                    image = document.querySelector('img.photo'),
+                        <script>
+                            var video = document.querySelector("#videoElement");
+                            navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
+                            if (navigator.getUserMedia) {       
+                                navigator.getUserMedia({video: true}, handleVideo, videoError);
+                            }
+                            function handleVideo(stream) {
+                                video.src = window.URL.createObjectURL(stream);
+                            }
+                            function videoError(e) {
+                                console.error(err);
+                            }
+                            function takeSelfie() {
+                                // $('#cameraInput').on('change', function(e){
+                                // $data = e.originalEvent.target.files[0];
+                                // $reader = new FileReader();
+                                // reader.onload = function(evt){
+                                // $('#your_img_id').attr('src',evt.target.result);
+                                // reader.readAsDataUrl($data);
+                                // }});
+                                var hidden_canvas = document.querySelector('canvas'),
+                                video = document.querySelector('video.camera_stream'),
+                                image = document.querySelector('img.photo'),
 
-                    // Get the exact size of the video element.
-                    width = video.videoWidth,
-                    height = video.videoHeight,
-    
-                    // Context object for working with the canvas.
-                    context = hidden_canvas.getContext('2d');
-    
-                    // Set the canvas to the same dimensions as the video.
-                    hidden_canvas.width = width;
-                    hidden_canvas.height = height;
-    
-                    // Draw a copy of the current frame from the video on the canvas.
-                    context.drawImage(video, 0, 0, width, height);
-    
-                    // Get an image dataURL from the canvas.
-                    var imageDataURL = hidden_canvas.toDataURL('image/png');
-    
-                    // Set the dataURL as source of an image element, showing the captured photo.
-                    image.setAttribute('src', imageDataURL); 
-    
-                    // Set the href attribute of the download button.
-                    document.querySelector('#dl-btn').href = imageDataURL;
-                }
-            </script>
-    
-            <center> <br /> 
-                <!-- <input type="button" value="Take a selfie!" onclick="takeSelfie()"/>  -->
-                <a id="dl-btn" href="#" download="glorious_selfie.png">Take a selfie!</a>
-            </center>
-
-            <form action="/gif-urls" method="post">
+                                // Get the exact size of the video element.
+                                width = video.videoWidth,
+                                height = video.videoHeight,
                 
-                <div class="form-group">
-                    <label for="id_name">Enter Concept</label>
-                    <input id="id_name" name="name" type="text" class="form-control">
-                </div>
+                                // Context object for working with the canvas.
+                                context = hidden_canvas.getContext('2d');
+                
+                                // Set the canvas to the same dimensions as the video.
+                                hidden_canvas.width = width;
+                                hidden_canvas.height = height;
+                
+                                // Draw a copy of the current frame from the video on the canvas.
+                                context.drawImage(video, 0, 0, width, height);
+                
+                                // Get an image dataURL from the canvas.
+                                var imageDataURL = hidden_canvas.toDataURL('image/png');
 
-                <div class="image-upload-screen-controls">
-                    <label class = "upload-button" for="add-image-button">Enter Image</label>
-                    <input id="add-image-button" name="image" type="file" accpet = "image/*" class="icon-button">
-                </div>
+                                console.log(imageDataURL.toString())
+                
+                                // Set the dataURL as source of an image element, showing the captured photo.
+                                image.setAttribute('src', imageDataURL); 
+                
+                                // Set the href attribute of the download button.
+                                document.querySelector('#dl-btn').href = imageDataURL;
+                            }
+                        </script>
+    
+                        <center> <br /> 
+                            <!-- <input type="button" value="Take a selfie!" onclick="takeSelfie()"/>  -->
+                            <a id="dl-btn" href="#" download="glorious_selfie.png" onclick="takeSelfie()">Take a selfie!</a>
+                        </center>
 
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-        </div>
+                        <br/>
+
+                        <form action="/gif-urls" method="post">
+                            
+                            <div class="form-group">
+                                <label for="id_name">Enter Concept</label>
+                                <input id="id_name" name="name" type="text" class="form-control">
+                            </div>
+
+                            <div class="image-upload-screen-controls">
+                                <label class = "upload-button" for="add-image-button">Enter Image</label>
+                                <input id="add-image-button" name="image" type="file" accpet = "image/*" class="icon-button">
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div> 
                 </div>
             </div>
         </div>
     </div>
-    </div>
+</body>
     
-        
 {% endblock %}
