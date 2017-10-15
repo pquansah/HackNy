@@ -11,8 +11,76 @@
         <a href="http://getbootstrap.com/" target="_blank">Bootstrap 3</a> 
         and Geri Madanguit, Paakwesi Quansah, Farhana Mustafa, and Tanjina Mowla</p>
         <hr />
+
         <div class="well">
             <h3>Enter concept of gifs to return</h3>
+
+            <div id="container">
+                <video autoplay="true" id="videoElement">
+         
+                </video>
+            </div>
+    
+            <script>
+                var video = document.querySelector("#videoElement");
+     
+                navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
+     
+                if (navigator.getUserMedia) {       
+                    navigator.getUserMedia({video: true}, handleVideo, videoError);
+                }
+     
+                function handleVideo(stream) {
+                    video.src = window.URL.createObjectURL(stream);
+                }
+     
+                function videoError(e) {
+                    console.error(err);
+                }
+                
+                function takeSelfie() {
+                    // $('#cameraInput').on('change', function(e){
+                    // $data = e.originalEvent.target.files[0];
+                    // $reader = new FileReader();
+                    // reader.onload = function(evt){
+                    // $('#your_img_id').attr('src',evt.target.result);
+                    // reader.readAsDataUrl($data);
+                    // }});
+    
+                    var hidden_canvas = document.querySelector('canvas'),
+                    video = document.querySelector('video.camera_stream'),
+                    image = document.querySelector('img.photo'),
+    
+                    // Get the exact size of the video element.
+                    width = video.videoWidth,
+                    height = video.videoHeight,
+    
+                    // Context object for working with the canvas.
+                    context = hidden_canvas.getContext('2d');
+    
+                    // Set the canvas to the same dimensions as the video.
+                    hidden_canvas.width = width;
+                    hidden_canvas.height = height;
+    
+                    // Draw a copy of the current frame from the video on the canvas.
+                    context.drawImage(video, 0, 0, width, height);
+    
+                    // Get an image dataURL from the canvas.
+                    var imageDataURL = hidden_canvas.toDataURL('image/png');
+    
+                    // Set the dataURL as source of an image element, showing the captured photo.
+                    image.setAttribute('src', imageDataURL); 
+    
+                    // Set the href attribute of the download button.
+                    document.querySelector('#dl-btn').href = imageDataURL;
+                }
+            </script>
+    
+            <center> <br /> 
+                <!-- <input type="button" value="Take a selfie!" onclick="takeSelfie()"/>  -->
+                <a id="dl-btn" href="#" download="glorious_selfie.png">Take a selfie!</a>
+            </center>
+
             <form action="/gif-urls" method="post">
                 
                 <div class="form-group">
